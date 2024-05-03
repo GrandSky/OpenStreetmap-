@@ -137,3 +137,10 @@ Target: 1600 requests per second, 95% responding in under 50ms.
 Description
 Everything from Milestone #3
 Target: 2.5k rps with 40ms 99th percentile latency
+
+# Tile Server
+Instructions: 
+
+https://switch2osm.org/serving-tiles/manually-building-a-tile-server-ubuntu-22-04-lts/
+
+https://switch2osm.org/serving-tiles/manually-building-a-tile-server-debian-12/
