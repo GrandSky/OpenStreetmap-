@@ -144,3 +144,8 @@ Instructions:
 https://switch2osm.org/serving-tiles/manually-building-a-tile-server-ubuntu-22-04-lts/
 
 https://switch2osm.org/serving-tiles/manually-building-a-tile-server-debian-12/
+
+# Route server
+Instructions:
+
+https://github.com/project-osrm/osrm-backend/pkgs/container/osrm-backend
