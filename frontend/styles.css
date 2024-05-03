@@ -1,0 +1,41 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+h1 {
+    text-align: center;
+}
+
+.container {
+    display: flex;
+}
+
+.map {
+    flex: 1;
+    height: 100vh;
+}
+
+.search-container {
+    width: 300px; /* Adjust width as needed */
+    padding: 20px;
+    background-color: #f9f9f9;
+}
+
+.search-form {
+    margin-bottom: 10px;
+}
+
+.search-input {
+    width: calc(100% - 90px); /* Adjust width as needed */
+    margin-right: 10px;
+}
+
+.search-results {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    padding: 10px;
+    max-height: 200px;
+    overflow-y: auto;
+}
