@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Map Viewer</title>
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/leaflet-mbtiles/leaflet-mbtiles.js"></script>
+<script src="https://unpkg.com/sql.js@0.3.2/js/sql.js"></script>
+    <link rel="stylesheet" href="styles.css"/>
+</head>
+<body>
+    <h1>Interactive Map Viewer</h1>
+    <div class="container">
+        <div id="map" class="map"></div>
+        <script>
+    // Initialize the map
+    var map = L.map('map').setView([40.7128, -74.0060], 12);
+    L.tileLayer('http://209.151.151.241/tiles/{z}/{x}/{y}.png', {
+    maxZoom: 18,
+   attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+
+}).addTo(map);
+
+    // Add the tile layer (replace the URL with your tile server URL)
+</script>
+
+        <div class="search-container">
+            <form id="search-form" class="search-form">
+                <input type="checkbox" id="only-in-box-checkbox" class="only-in-box-checkbox">
+                <label for="only-in-box-checkbox">Only in Box</label>
+                <input type="text" id="search-input" class="search-input" placeholder="Enter search term...">
+                <button type="submit" class="search-button">Search</button>
+            </form>
+            <div id="search-results" class="search-results"></div>
+        </div>
+        <div class="search-container">
+            <form id="search-form" class="search-form">
+                <label for="source-input">Source:</label>
+                <input type="text" id="source-input" class="search-input" placeholder="Enter source location">
+                <label for="destination-input">Destination:</label>
+                <input type="text" id="destination-input" class="search-input" placeholder="Enter destination location">
+                <button type="submit" class="search-button">Find Route</button>
+            </form>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
